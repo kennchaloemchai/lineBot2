@@ -22,7 +22,18 @@ def callback():
     decoded = json.loads(json_line)
     user = decoded["events"][0]['replyToken']
     userText = decoded["events"][0]['message']['text']
-    sendText(user,userText)
+    #sendText(user,userText)
+    if (userText == 'ลงทะเบียน') :
+        sendText(user,'www.xnxxs.com')
+    elif (userText == 'เช็คเครดิต') :
+        sendText(user,'เว็บไม่เกรียนไม่โกง')
+    elif (userText == 'สนใจ') :
+        sendText(user,'บอล บาคาร่า ยิงปลาและอีกมากมาย')
+    elif (userText == 'วิธีการเล่น') :
+        sendText(user,'1.โอนเงิน 2.รอรับเงินได้เลย')
+    else :
+        sendText(user,'สวัสดีครับ')
+
     return '',200
 
 def sendText(user, text):
